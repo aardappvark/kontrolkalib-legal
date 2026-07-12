@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KontrolKalib — Controller Drift Tester &amp; Calibrator for Solana Seeker</title>
+<style>
+body{background:#0A0A0E;color:#ccc;font-family:sans-serif;padding:20px 24px;max-width:860px;margin:auto;line-height:1.7}
+h1{color:#9945FF}h2{color:#14F195;margin-top:28px}h3{color:#9945FF}
+.highlight{background:#18182E;border-left:3px solid #9945FF;padding:12px 16px;margin:16px 0;border-radius:4px}
+.warning{background:#2E1818;border-left:3px solid #ff4444;padding:12px 16px;margin:16px 0;border-radius:4px}
+.green{background:#182E1E;border-left:3px solid #14F195;padding:12px 16px;margin:16px 0;border-radius:4px}
+a{color:#9945FF}nav{margin:16px 0}nav a{margin-right:16px;color:#14F195;text-decoration:none}
+table{width:100%;border-collapse:collapse;margin:16px 0}th{background:#18182E;color:#14F195;padding:10px;text-align:left}td{padding:10px;border-bottom:1px solid #222}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid #222;color:#555;font-size:12px}
+.badge{display:inline-block;background:#18182E;border:1px solid #9945FF;color:#9945FF;padding:4px 14px;border-radius:20px;font-size:14px;margin-bottom:12px}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin:20px 0}
+.feature-card{background:#18182E;border:1px solid #222;border-radius:8px;padding:16px}
+.feature-card h3{margin:0 0 8px 0;font-size:15px}
+.feature-card p{margin:0;font-size:14px;color:#aaa}
+.legal-links{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin:20px 0}
+.legal-link{background:#18182E;border:1px solid #222;border-radius:8px;padding:14px 16px;text-decoration:none;color:#14F195;font-size:14px;transition:border-color 0.2s}
+.legal-link:hover{border-color:#9945FF}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="terms.html">Terms</a>
+  <a href="disclaimer.html">Disclaimer</a>
+  <a href="sanctions.html">Sanctions</a>
+  <a href="copyright.html">Copyright</a>
+  <a href="license.html">Licence</a>
+</nav>
+
+<h1>KontrolKalib</h1>
+<div class="badge">Built for Solana Seeker</div>
+<p style="font-size:18px;color:#eee;margin-top:8px">Test any controller. Re-centre your PlayStation pad over USB. Prove it's fixed.</p>
+
+<p>
+  KontrolKalib turns your Solana Seeker into a precision instrument for game controllers. Connect
+  almost any pad over Bluetooth to see its analog sticks live on a phosphor scope, measure resting
+  drift, and check stick range and circularity. Plug a DualShock&trade; 4 or DualSense&trade; in
+  over USB-C and KontrolKalib can re-centre its stored calibration — then run a before/after test so
+  you can see the difference for yourself. Everything runs on-device: no accounts, no servers, no
+  data collection.
+</p>
+
+<div class="green">
+  KontrolKalib re-centres a controller's stored calibration to compensate for wear. It cannot repair
+  worn potentiometers or other hardware, and it is not a financial service.
+</div>
+
+<div class="warning">
+  Calibration writes to your controller's own memory. It carries a small but real risk of leaving a
+  controller in an unexpected state. Only genuine Sony controllers are calibrated, writes stop at the
+  first unexpected response, and you use the calibration feature at your own risk. See the
+  <a href="disclaimer.html">Disclaimer &amp; Risk Disclosure</a>.
+</div>
+
+<h2>Features</h2>
+<div class="feature-grid">
+  <div class="feature-card">
+    <h3>Universal Controller Tester</h3>
+    <p>Connect almost any Bluetooth or USB gamepad and watch its sticks, triggers, buttons and D-pad respond live. Works with pads KontrolKalib cannot calibrate, too.</p>
+  </div>
+  <div class="feature-card">
+    <h3>Drift Score &amp; Phosphor Scope</h3>
+    <p>Measure how far each stick rests from true centre and how much it wanders, on an oscilloscope-style display with a clear OK / Minor / Significant / Severe verdict.</p>
+  </div>
+  <div class="feature-card">
+    <h3>PlayStation Calibration over USB</h3>
+    <p>Re-centre a DualShock&trade; 4 (v1/v2) or DualSense&trade; over USB-C. A guided, step-locked wizard walks you through centre and range calibration.</p>
+  </div>
+  <div class="feature-card">
+    <h3>Test Before You Keep</h3>
+    <p>Calibration is applied temporarily first, so you can try it in a game before choosing to save it permanently. Honest, reversible, no surprises.</p>
+  </div>
+  <div class="feature-card">
+    <h3>Safety-Gated Writes</h3>
+    <p>Genuine-hardware and firmware checks run before any write, clones are refused, and a charge check guards permanent saves. Nothing is written after an unexpected response.</p>
+  </div>
+  <div class="feature-card">
+    <h3>Runs On-Device</h3>
+    <p>No accounts, no analytics, no advertising. Controller details are read locally and never leave your phone. A wallet connection is used only for optional paid features.</p>
+  </div>
+</div>
+
+<h2>Legal Documents</h2>
+<div class="legal-links">
+  <a class="legal-link" href="privacy.html">Privacy Policy</a>
+  <a class="legal-link" href="terms.html">Terms of Service</a>
+  <a class="legal-link" href="disclaimer.html">Disclaimer &amp; Risk Disclosure</a>
+  <a class="legal-link" href="sanctions.html">Sanctions &amp; Restricted Regions</a>
+  <a class="legal-link" href="copyright.html">Copyright Notice</a>
+  <a class="legal-link" href="license.html">Licence</a>
+</div>
+
+<footer>
+  <p>&copy; 2026 MidMightBit Games. All rights reserved. | <a href="mailto:aardappvark@proton.me">aardappvark@proton.me</a></p>
+  <p>KontrolKalib is an independent application. It is not affiliated with, endorsed by, or sponsored by Sony Interactive Entertainment Inc., Solana Labs, Inc., or Solana Mobile Inc. DUALSHOCK, DUALSENSE and PLAYSTATION are trademarks of Sony Interactive Entertainment Inc. SOLANA and SEEKER are trademarks of their respective owners.</p>
+</footer>
+
+</body>
+</html>
