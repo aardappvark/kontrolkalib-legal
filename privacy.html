@@ -39,7 +39,7 @@ footer{margin-top:40px;padding-top:16px;border-top:1px solid #222;color:#555;fon
 <div class="green">
   <strong>KontrolKalib collects no personal data.</strong> There are no accounts, no advertising,
   and no third-party trackers. Your controller data never leaves your device. The App contains an
-  optional anonymous usage counter &mdash; <strong>currently inactive in this build</strong> (see
+  optional anonymous usage counter (see
   section&nbsp;9) &mdash; which even when active would send only an event name with no identity
   attached, and which you can turn off in the App's Settings.
 </div>
@@ -56,7 +56,7 @@ footer{margin-top:40px;padding-top:16px;border-top:1px solid #222;color:#555;fon
   <li>Your name, email address, phone number, or any contact details</li>
   <li>Your location, IP address, or device identifiers</li>
   <li>Identifiable analytics or behavioural data (the only telemetry the App contains is the
-      anonymous, aggregate usage counter described in section&nbsp;9 &mdash; currently inactive
+      anonymous, aggregate usage counter described in section&nbsp;9 &mdash; active
       in this build)</li>
   <li>Advertising identifiers</li>
   <li>Controller serial numbers, firmware details, or any controller data read during testing or calibration</li>
@@ -116,14 +116,14 @@ footer{margin-top:40px;padding-top:16px;border-top:1px solid #222;color:#555;fon
 
 <h2>9. Anonymous Usage Analytics</h2>
 <p>
-  <strong>Status: currently inactive in this build.</strong> The current build of the App ships
+  <strong>Status: active.</strong> The App ships
   without an analytics key and the analytics service has not been deployed, so no analytics events
   are sent and the public stats page is not yet live. The description below applies only if a
   future update activates the feature; this policy will be kept current if that happens.
 </p>
 <p>
   If activated: to understand which features people use and where the App is popular, the App sends
-  short, anonymous event pings to an analytics endpoint we operate (a Cloudflare Worker with its own
+  short, anonymous event pings to an analytics endpoint we operate (a Vercel serverless function with its own
   database). Each ping contains <strong>only an event-type label</strong> &mdash; for example
   <code>app_open</code>, <code>calibrate_saved_permanent</code>, or <code>geo_blocked</code>. It
   carries no account, no device identifier, no wallet address, and no controller data.
@@ -141,7 +141,7 @@ footer{margin-top:40px;padding-top:16px;border-top:1px solid #222;color:#555;fon
   Because the data is anonymous and aggregate it does not identify you (see GDPR Recital&nbsp;26).
   You can disable it at any time in <strong>Settings &rarr; Privacy &rarr; Anonymous usage
   stats</strong>. Once the service is active, the live aggregate totals will be public at
-  <a href="https://kontrolkalib-analytics.aardappvark.workers.dev/public-stats">kontrolkalib-analytics.aardappvark.workers.dev/public-stats</a>.
+  <a href="https://kontrolkalib-analytics.vercel.app/public-stats">kontrolkalib-analytics.vercel.app/public-stats</a>.
 </p>
 
 <h2>10. Children's Privacy</h2>
