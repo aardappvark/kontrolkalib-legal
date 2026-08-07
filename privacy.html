@@ -28,7 +28,7 @@ footer{margin-top:40px;padding-top:16px;border-top:1px solid #222;color:#555;fon
 </nav>
 
 <h1>Privacy Policy</h1>
-<p><strong>Effective date:</strong> 12 July 2026 &nbsp;|&nbsp; <strong>Last updated:</strong> 12 July 2026</p>
+<p><strong>Effective date:</strong> 12 July 2026 &nbsp;|&nbsp; <strong>Last updated:</strong> 7 August 2026</p>
 
 <h2>1. Introduction</h2>
 <p>
@@ -37,14 +37,16 @@ footer{margin-top:40px;padding-top:16px;border-top:1px solid #222;color:#555;fon
   information as possible.
 </p>
 <div class="green">
-  <strong>KontrolKalib collects no personal data.</strong> There are no accounts, no servers
-  operated by us, no analytics, no advertising, and no tracking. Everything the App does happens
-  locally on your device.
+  <strong>KontrolKalib collects no personal data.</strong> There are no accounts, no advertising,
+  and no third-party trackers. Your controller data never leaves your device. The App contains an
+  optional anonymous usage counter &mdash; <strong>currently inactive in this build</strong> (see
+  section&nbsp;9) &mdash; which even when active would send only an event name with no identity
+  attached, and which you can turn off in the App's Settings.
 </div>
 
 <h2>2. Data Controller</h2>
 <p>
-  The data controller responsible for the App is <strong>MidMightBit Games</strong>, Melbourne,
+  The data controller responsible for the App is <strong>AardAppvark</strong>, Melbourne,
   Victoria, Commonwealth of Australia. Contact: <a href="mailto:aardappvark@proton.me">aardappvark@proton.me</a>.
 </p>
 
@@ -53,7 +55,9 @@ footer{margin-top:40px;padding-top:16px;border-top:1px solid #222;color:#555;fon
 <ul>
   <li>Your name, email address, phone number, or any contact details</li>
   <li>Your location, IP address, or device identifiers</li>
-  <li>Analytics, usage statistics, or behavioural data</li>
+  <li>Identifiable analytics or behavioural data (the only telemetry the App contains is the
+      anonymous, aggregate usage counter described in section&nbsp;9 &mdash; currently inactive
+      in this build)</li>
   <li>Advertising identifiers</li>
   <li>Controller serial numbers, firmware details, or any controller data read during testing or calibration</li>
 </ul>
@@ -67,7 +71,7 @@ footer{margin-top:40px;padding-top:16px;border-top:1px solid #222;color:#555;fon
   <tr><th>Information</th><th>Purpose</th><th>Stored?</th></tr>
   <tr><td>Connected controller data (make/model identifiers, stick and button input, and, over USB, firmware/serial details reported by the controller)</td><td>To run the tester and calibration features</td><td>Held in memory while in use; not written to permanent storage by default</td></tr>
   <tr><td>Your app settings (e.g. test duration, display toggles) and your last drift verdict</td><td>To remember your preferences</td><td>Stored locally in the App's private storage</td></tr>
-  <tr><td>Calibration history and saved profiles (if you use those features)</td><td>To let you review past calibrations</td><td>Stored locally in the App's private storage on your device</td></tr>
+  <tr><td>Calibration history (if you use that feature)</td><td>To let you review past calibrations</td><td>Stored locally in the App's private storage on your device</td></tr>
 </table>
 
 <h2>5. Wallet Connection and Payments</h2>
@@ -83,10 +87,17 @@ footer{margin-top:40px;padding-top:16px;border-top:1px solid #222;color:#555;fon
 
 <h2>6. Network Requests</h2>
 <p>
-  The core tester and calibration features function offline and make no network requests to us.
-  The App has no analytics or advertising network calls. Network activity is limited to what is
-  required to connect your wallet and submit a payment transaction you have authorised, which is
-  handled by your wallet app and the Solana network, not by servers we operate.
+  The core tester and calibration features function offline &mdash; no controller data is ever
+  transmitted. The only data the App sends to us is the anonymous usage events described in
+  section&nbsp;9. Other network activity is limited to what is required to connect your wallet and
+  submit a payment transaction you have authorised, which is handled by your wallet app and the
+  Solana network, not by servers we operate.
+</p>
+<p>
+  To verify Seeker Genesis Token status, submit payments, and restore purchases, the App sends
+  your wallet's public address to Solana RPC providers: api.mainnet-beta.solana.com and, as a
+  fallback, solana-rpc.publicnode.com (Allnodes). These providers receive your IP address and the
+  public address. Private keys never leave your wallet.
 </p>
 
 <h2>7. No Accounts</h2>
@@ -103,11 +114,34 @@ footer{margin-top:40px;padding-top:16px;border-top:1px solid #222;color:#555;fon
 </table>
 <p>The App requests no location, contacts, camera, microphone, or storage permissions for these features.</p>
 
-<h2>9. No Analytics, Advertising, or Tracking</h2>
+<h2>9. Anonymous Usage Analytics</h2>
 <p>
-  The App contains no third-party analytics, advertising, crash-reporting, or tracking SDKs. We do
-  not build profiles about you and do not engage in automated decision-making that produces legal
-  or similarly significant effects concerning you.
+  <strong>Status: currently inactive in this build.</strong> The current build of the App ships
+  without an analytics key and the analytics service has not been deployed, so no analytics events
+  are sent and the public stats page is not yet live. The description below applies only if a
+  future update activates the feature; this policy will be kept current if that happens.
+</p>
+<p>
+  If activated: to understand which features people use and where the App is popular, the App sends
+  short, anonymous event pings to an analytics endpoint we operate (a Cloudflare Worker with its own
+  database). Each ping contains <strong>only an event-type label</strong> &mdash; for example
+  <code>app_open</code>, <code>calibrate_saved_permanent</code>, or <code>geo_blocked</code>. It
+  carries no account, no device identifier, no wallet address, and no controller data.
+</p>
+<p>
+  The country and city are derived at the network edge from the connection and are retained only as
+  aggregate counts (for example "5 calibrations saved in Australia today"). <strong>Your IP address
+  is never logged or stored by us.</strong> We keep only these aggregate totals &mdash; never a
+  per-user or per-device record &mdash; so the data cannot be traced back to an individual.
+</p>
+<p>
+  This is first-party only: the App contains <strong>no third-party analytics, advertising,
+  crash-reporting, or tracking SDKs</strong>. We do not build profiles about you and do not engage
+  in automated decision-making that produces legal or similarly significant effects concerning you.
+  Because the data is anonymous and aggregate it does not identify you (see GDPR Recital&nbsp;26).
+  You can disable it at any time in <strong>Settings &rarr; Privacy &rarr; Anonymous usage
+  stats</strong>. Once the service is active, the live aggregate totals will be public at
+  <a href="https://kontrolkalib-analytics.aardappvark.workers.dev/public-stats">kontrolkalib-analytics.aardappvark.workers.dev/public-stats</a>.
 </p>
 
 <h2>10. Children's Privacy</h2>
@@ -141,10 +175,16 @@ footer{margin-top:40px;padding-top:16px;border-top:1px solid #222;color:#555;fon
   App stores locally can be removed by you at any time by clearing the App's data or uninstalling it.
 </p>
 
-<h2>14. Data Retention</h2>
+<h2>14. Data Retention and Android Auto Backup</h2>
 <p>
-  We retain no personal data. Data stored locally by the App (settings, history, profiles) remains
+  We retain no personal data. Data stored locally by the App (settings, history) remains
   on your device until you delete it or uninstall the App.
+</p>
+<p>
+  If Android Backup is enabled on your device, the App's settings and progress data are included
+  in your device's encrypted Google backup, survive uninstalling the App, and may be restored when
+  you reinstall. Wallet data is always excluded from backup. You can exclude the App from backup in
+  Android Settings or delete the backup from your Google account.
 </p>
 
 <h2>15. Do Not Track</h2>
@@ -164,13 +204,13 @@ footer{margin-top:40px;padding-top:16px;border-top:1px solid #222;color:#555;fon
 
 <h2>18. Contact</h2>
 <div class="highlight">
-  <strong>MidMightBit Games</strong><br>
+  <strong>AardAppvark</strong><br>
   Melbourne, Victoria, Australia<br>
   Email: <a href="mailto:aardappvark@proton.me">aardappvark@proton.me</a>
 </div>
 
 <footer>
-  <p>&copy; 2026 MidMightBit Games. All rights reserved. | <a href="mailto:aardappvark@proton.me">aardappvark@proton.me</a></p>
+  <p>&copy; 2026 AardAppvark. All rights reserved. | <a href="mailto:aardappvark@proton.me">aardappvark@proton.me</a></p>
   <p>KontrolKalib is an independent application. Not affiliated with Sony Interactive Entertainment Inc., Solana Labs, Inc., or Solana Mobile Inc.</p>
 </footer>
 
